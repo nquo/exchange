@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmentLayout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:background="@color/light"
+            android:orientation="vertical"
+            >
+
+            <Spinner
+                android:id="@+id/spinnerFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="0"
+                android:entries="@string/action_from"
+                android:gravity="center"
+                android:spinnerMode="dialog"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/inputValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background"
+                android:gravity="center"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:hint="@string/placeholder_emptyvalue"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:background="@color/dark"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinnerTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="0"
+                android:entries="@string/action_from"
+                android:paddingTop="30dp"
+                android:spinnerMode="dialog"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/resultValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:textAlignment="center"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_money"
+        app:layout_anchor="@id/viewA"
+        app:layout_anchorGravity="bottom|center" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_money_off"
+        app:fabSize="normal"
+        app:layout_anchor="@id/viewB"
+        app:layout_anchorGravity="bottom|end"
+        android:paddingTop="@dimen/fab_margin"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_swap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_swap"
+        android:layout_gravity="top|end"
+        app:fabSize="normal"
+        app:layout_anchor="@id/fab_clear"
+        app:layout_anchorGravity="top"
+        android:layout_marginBottom="85dp"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

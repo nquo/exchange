@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Exchange</string>
+    <string name="spinner_title">Select currecy</string>
+    <string name="placeholder_emptyvalue">0</string>
+    <string name="message_error">No data. Check your internet connection</string>
+    <string name="action_from">From</string>
+    <string name="action_convert">Convert</string>
+</resources>
